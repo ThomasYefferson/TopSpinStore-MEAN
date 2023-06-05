@@ -1,0 +1,87 @@
+<div class="Form">
+  <div class="logged-header">
+    <div class="Form-Photo">
+      <div class="Top">
+        <p class="Name">{{ UserSession[0].Name }}</p>
+      </div>
+      <!-- <span *ngIf="'http://localhost:3000/fotos/{{Id}}.png' != null ">
+        <img class="Photo" src="http://localhost:3000/fotos/{{ Id }}.png" />
+      </span> -->
+      <span *ngIf="'http://localhost:3000/fotos/{{Id}}.png'.length != 0">
+        <img class="Photo" src="/assets/Icons/avatar.svg" />
+      </span>
+      <div class="icon" title="Change picture" (click)="OpenModal()">
+        <i class="fa-solid fa-table-tennis-paddle-ball fa-lg"></i>
+      </div>
+    </div>
+  </div>
+  <div class="container">
+    <div class="Set-user">
+      <div class="Fields" *ngFor="let item of DataLoggedIn">
+        <span
+          *ngIf="
+            UserSession[0].Rol == 2 ||
+            (UserSession[0].Rol == 1 && item.Icon != 'cart-shopping')
+          "
+        >
+          <a [title]="item.Title">
+            <i class="fa-solid fa-{{ item.Icon }} fa-lg"></i>
+          </a>
+        </span>
+      </div>
+    </div>
+    <div class="Form-Info" *ngIf="UserSession[0].Rol == 2">
+      <div class="Fields" *ngFor="let item of LoggedForm">
+        <a [title]="item.Title"
+          ><i class="fa-solid fa-{{ item.Icon }} fa-lg"></i>
+          <label title="{{ item.Title }}">{{ item.Data }}</label></a
+        >
+      </div>
+    </div>
+  </div>
+  <div class="logged-footer">
+    <div class="btn btn-1" (click)="LogOut()" title="Logout">Logout</div>
+  </div>
+</div>
+
+<div  class="modal fade"  id="modaldatos"  tabindex="-1"  aria-labelledby="exampleModalLabel"  aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-body">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h3 class="modal-title" id="exampleModalLabel" title="Register Product">  Photo</h3>
+        <div  type="button"  class="btn-shut"  title="close"  (click)="CloseModal()">
+          <h1>&times;</h1>
+        </div>
+      </div>
+      <div class="container">
+        <div class="row">
+
+            <!-- UPLOAD IMAGES -->
+
+            <div class="form-group col-sm-12 col-md-12">
+              <div class="upload">
+                <div class="row">
+                  <!-- Carga de imagenes-->
+                 <div class="col-8" *ngIf="Id != ''">
+                  <app-uploadfiles
+                    [urldestino]="destino"
+                    [path]="path"
+                    [inputName]="'userfile'"
+                  ></app-uploadfiles>
+                </div>
+                <!-- Imagen -->
+                 <div class="col-4" *ngIf="Id != ''">
+                   <img
+                     src="http://localhost:3000/fotos/{{ Id }}.png"
+                     class="defaultImage"
+                   />
+                 </div>
+                </div>
+              </div>
+            </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

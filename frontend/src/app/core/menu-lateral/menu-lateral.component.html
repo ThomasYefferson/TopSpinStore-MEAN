@@ -1,0 +1,46 @@
+<div class="datosinformativo">
+    <div><label></label></div>
+    <div class="d-flex" title="login" role="login">
+      <div class="Login-Success" id="Login-Success"></div>
+      <img class="Photo btn-login" (click)="LoginPrivateZoneShow()" src="/assets/Icons/avatar.svg">
+      <!-- <app-ico-login class="btn-login" (click)="LoginShow()" (dblclick)="PrivateZone()"></app-ico-login> -->
+    </div>
+</div>
+
+<nav class="nav">
+    <div id="menulateral" [ngStyle]="">
+        <div class="logo">
+            <a routerLink="/home" title="home" target=""><img src="/assets/Icons/Icon.png" width="40" height="40" class="d-inline-block align-top"
+                alt=""/></a>
+        </div>
+        <ul class="list" *ngFor="let MenuLateral of DatosMenu">
+            <span *ngIf="MenuLateral.Name != ''">
+              <li class="list__item">
+                  <div class="list__button">
+                      <a [class]=MenuLateral.Name [routerLink]=MenuLateral.destino routerLinkActive="Active-link" class="nav__link">
+                          <i class="fa-solid fa-{{MenuLateral.icon}} fa-lg"></i>
+                          {{MenuLateral.Name}}
+                      </a>
+                  </div>
+              </li>
+            </span>
+        </ul>
+    </div>
+  </nav>
+
+  <span *ngIf="UserSession[0].User_id ==''">
+    <app-logged-in *ngIf=LoginState ></app-logged-in>
+  </span>
+
+    <!-- <nav class="nav">
+      <div id="menulateral">
+          <div class="logo">
+              <a routerLink="/home" target=""><img src="/assets/Icons/Icon.png" width="40" height="40" class="d-inline-block align-top"
+                  alt=""/></a>
+          </div>
+          <div class="item" *ngFor="let item of DatosMenu">
+              <div class="label" routerLink={{item.destino}}>{{item.nombre}}</div>
+          </div>
+
+      </div>
+    </nav> -->

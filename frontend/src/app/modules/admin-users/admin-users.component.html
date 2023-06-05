@@ -1,0 +1,140 @@
+<div class="row ventanaflotante">
+  <div class="info ">
+  <table class="table table-striped table-hover">
+    <thead>
+      <tr>
+        <!-- <th scope="col">Imagen</th> -->
+        <th scope="col">Cedula</th>
+        <th scope="col">Role</th>
+        <th scope="col">Name</th>
+        <th scope="col">Lastname</th>
+        <th scope="col">Email</th>
+        <th scope="col">State</th>
+        <th scope="col">Age</th>
+        <th scope="col">Phone</th>
+        <th scope="col">Address</th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <tr *ngFor="let User of ListUsers" (click)="LoadById(User._id)">
+        <!-- <td><img src="http:localhost:3000/productos/{{User._id}}.png" + class="imgproductos"></td>  Roles[1].name-->
+        <td>{{ User.Cedula }}</td>
+        <td>
+          <div *ngFor="let Roles of Roles">
+            <span *ngIf="User.Rol==Roles.Id"> {{Roles.Name}} </span>
+          </div>
+        </td>
+        <td>{{ User.Name }}</td>
+        <td>{{ User.LastName }}</td>
+        <td>{{ User.Email }}</td>
+        <td>
+          <div *ngFor="let StateU of States">
+            <span *ngIf="User.Estado===StateU.Id"> {{StateU.Name}} </span>
+          </div>
+        </td>
+        <td>{{ User.Age }}</td>
+        <td>{{ User.Phone }}</td>
+        <td>{{ User.Address }}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+<div class=" button">
+    <div class="new" title="Add User" (click)="OpenModal()">
+      <i class="fa-sharp fa-regular fa-plus fa-lg"></i>
+    </div>
+</div>
+</div>
+
+<div class="modal fade" id="modaldatos" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-body">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h3 class="modal-title" id="exampleModalLabel" title="Register Users">
+          User
+        </h3>
+        <div type="button" class="btn-shut" title="close" (click)="CloseModal()">
+          <h1>&times;</h1>
+        </div>
+      </div>
+      <div class="container">
+        <div class="row">
+          <div class="modal-body">
+            <div class="row">
+              <div class="form-group col-6 col-md-6">
+                <label class="col-form-label">Cedula:</label>
+                <input type="text" class="form-control" title="Cedula" [(ngModel)]="Cedula" placeholder="Cedula" required/>
+              </div>
+              <div class="Category form-group col-6 col-md-5">
+                <mat-form-field appearance="fill">
+                  <mat-label>Role:</mat-label>
+                  <mat-select [(ngModel)]="Rol" title="Role" placeholder="Role">
+                    <option label=" -- Seleccionar Role -- "></option>
+                    <mat-option *ngFor="let item of Roles" [value]="item.Id">
+                      {{ item.Name }}
+                    </mat-option>
+                  </mat-select>
+                </mat-form-field>
+              </div>
+            </div>
+
+            <!-- NAME -->
+            <div class="form-group col-12 col-md-12">
+              <label for="message-text" class="col-form-label">Name:</label>
+              <input class="form-control" title="Name" [(ngModel)]="Name" placeholder="Name" />
+            </div>
+            <div class="row">
+              <div class="form-group col-12 col-md-12">
+                <label class="col-form-label">Lastname:</label>
+                <input class="form-control" title="Lastname" [(ngModel)]="LastName" placeholder="Lastname"/>
+              </div>
+              <div class="form-group col-12 col-md-12">
+                <label class="col-form-label">Email:</label>
+                <input *ngIf="Id === ''" class="form-control" title="Email" [(ngModel)]="Email" placeholder="Email" required/>
+                <input *ngIf="Id !== ''" class="form-control" title="Email" [(ngModel)]="Email" placeholder="Email" disabled/>
+              </div>
+            </div>
+            <div class="row">
+              <div class="form-group col-6 col-md-6">
+                <label class="col-form-label">Age:</label>
+                <input class="form-control" title="Age" [(ngModel)]="Age" placeholder="Age" />
+              </div>
+            </div>
+            <!-- PHONE -->
+            <div class="form-group col-12 col-md-12">
+              <label class="col-form-label">Phone:</label>
+              <input class="form-control" title="Phone" [(ngModel)]="Phone" placeholder="Phone"/>
+            </div>
+            <!-- ADDRESS -->
+            <div class="form-group col-12 col-md-12">
+              <label class="col-form-label">Address:</label>
+              <input class="form-control" title="Address" [(ngModel)]="Address" placeholder="Address"/>
+            </div>
+            <!-- <div class="col-12" *ngIf="Id != ''">
+                <app-subirarchivos [urldestino]="destino" [path]="path" [inputName]="userFile"> </app-subirarchivos>
+              </div> -->
+          </div>
+        </div>
+      </div>
+      <!-- BUTTONS MODAL -->
+      <div class="modal-footer">
+        <button *ngIf="Id === ''" type="button" class="btn btn-primary" title="Save" (click)="Save()">
+          <i class="fa-solid fa-floppy-disk"></i>
+          Save
+        </button>
+        <div class="row btn-ud" *ngIf="Id !== ''">
+          <button type="button" class="btn btn-primary" title="Update" (click)="UpdateById()">
+            <i class="fa-sharp fa-solid fa-highlighter"></i>
+            Update
+          </button>
+          <button type="button" class="btn btn-danger" title="Delete" (click)="DeleteById()">
+            <i class="fa-solid fa-trash" fa-md></i>
+            Delete
+          </button>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>

@@ -1,0 +1,23 @@
+<div class="Form">
+  <div class="info">
+    <div class="info_log container" style="width: 100%;">
+      <input class="Input-2" type="text" [(ngModel)]=Email placeholder="Email" required/>
+      <div class="Warm"><pre>{{msn_Email}}</pre></div>
+
+      <input class="Input-2" type="password" [(ngModel)]=Password placeholder="Password" required/>
+      <div class="Warm"><pre>{{msn_Password}}</pre></div>
+    </div>
+  </div>
+  <div class="button_login">
+    <div class="buttons_log container" style="width: 100%;">
+        <div class="btn btn-2" (click)="Login()">Login</div>
+        <label class="btn-text" id="ForgotPassword" outerLink="">Have you forgotten your password?</label>
+        <label class="btn-text" id="ButtonRegister" (click)="OpenRegister()">Sign up</label>
+    </div>
+  </div>
+</div>
+
+<!-- NG-MODAL REGISTER -->
+<div *ngIf="RegisterState==true">
+  <app-register></app-register>
+</div>

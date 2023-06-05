@@ -1,0 +1,62 @@
+.Form {
+  position: relative;
+  width: 325px;
+  min-height: 270px;
+  max-height: 320px;
+  background: var(--app-backgrond);
+  border-radius: 0% 0% 0% 10%;
+  padding: 2% 2% 2% 2%;
+  margin: 0px 3px 0 0;
+  z-index: 10;
+  animation: open_slide 0.3s;
+}
+
+.btn-text{
+  font-size: 100%;
+  width: 100%;
+  margin: 0%;
+  padding: 1%;
+  text-align: left;
+  justify-content: left;
+  background: none;
+  color: rgb(255, 255, 255);
+  border: none;
+}
+
+.btn-text:hover{
+  color:rgb(243, 11, 11);
+  cursor: pointer;
+}
+
+/*=============  ALERTS  ============*/
+.Alert{
+  width: 100%;
+  height: 10%;
+  font-size: 10px;
+  color: rgb(124, 252, 0)
+}
+
+.Warm{
+  width: 100%;
+  height: auto;
+  font-size: 100%;
+  border-color: #fff;
+  color: rgb(225, 75, 75)
+}
+
+/* Add Zoom Animation */
+@keyframes open_slide {
+  from {
+      height: 0;
+  }
+
+  to {
+      height: 270px;
+  }
+
+}
+
+.info_log {
+  margin: 0.5% auto;
+  padding: 0.5% auto;
+}

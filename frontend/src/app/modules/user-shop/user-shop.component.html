@@ -1,0 +1,47 @@
+<div class="row ventanaflotante">
+  <div class="info">
+    <table class="table table-striped table-hover">
+      <thead>
+        <tr>
+          <th scope="col"></th>
+          <th scope="col">Imagen</th>
+          <th scope="col">SKU</th>
+          <th scope="col">Name</th>
+          <th scope="col">Price</th>
+          <th scope="col">Quantity</th>
+          <th scope="col">Amount</th>
+        </tr>
+      </thead>
+
+      <tbody>
+        <tr
+          *ngFor="let Market of ListMarket" >
+          <td><i class="fa-solid fa-trash" (click)="DeleteItem(Market._id)"></i></td>
+          <td><img src="http:localhost:3000/productos/{{Market.Product_id}}.png" class="imgproductos"></td>
+          <td>{{ Market.Products.Codigo }}</td>
+          <td>{{ Market.Products.Nombre }}</td>
+          <td>{{ Market.Products.Precio | currency }}</td>
+          <td>
+            <div class="row">
+              <div class="col-2">
+                <span *ngIf="Market.Quantity == 1" (click)="DeleteItem(Market._id)"><i class="fa-solid fa-trash"></i></span>
+                <span *ngIf=" Market.Quantity > 1 " (click)="SubMyMartket(Market._id)">
+                  <i class="fa-solid fa-cart-minus"></i>
+                </span>
+              </div>
+              <div class="col-2">{{ Market.Quantity }}</div>
+
+              <div class="col-2">
+                <span *ngIf="Market.Quantity< Market.Products.Cantidad"  (click)="AddMyMartket(Market._id)">
+                  <i class="fa-solid fa-cart-plus "></i>
+                </span>
+              </div>
+            </div>
+          </td>
+
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+

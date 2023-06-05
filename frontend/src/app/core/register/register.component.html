@@ -1,0 +1,29 @@
+<div class="Form">
+      <div class="Register">
+        <div class="btn-shut" id="btn-cancel" title="Close" (click)="CloseRegister()"><h1>&times;</h1></div>
+        <h2 class="Title-1">Register</h2>
+        <div class="Alert">{{msn_Register}}</div>
+          <div class="container">
+
+              <input class="Input-2" type="text" [(ngModel)]=CC placeholder="CC" required/>
+              <div class="Warm"><pre>{{msn_CC}}</pre></div>
+
+              <input class="Input-2" type="text" [(ngModel)]=Name placeholder="Name" required/>
+              <div class="Warm"><pre>{{msn_Name}}</pre></div>
+
+              <input class="Input-2" type="text" [(ngModel)]=Email placeholder="Email" required/>
+              <div class="Warm"><pre>{{msn_Email}}</pre></div>
+
+              <input class="Input-2" type="password" [(ngModel)]=Password placeholder="Password" required/>
+              <div class="Warm"><pre>{{msn_Password}}</pre></div>
+
+              <input class="Input-2" type="password" [(ngModel)]=ConfirmPassword placeholder="Confirm Password" required/>
+              <div class="Warm"><pre>{{msn_ConfirmPassword}}</pre></div>
+
+          </div>
+          <div class="container Reg-btns">
+            <div class="btn btn-2" (click)="CloseRegister()">Cancel</div>
+            <div class="btn btn-2" (click)="Register()">Register</div>
+          </div>
+      </div>
+</div>

@@ -1,0 +1,26 @@
+.ventanaflotante{
+  position: absolute;
+  background: whitesmoke;
+  top: 90px;
+  left: 195px;
+  width: calc(98% - 175px);
+  height: calc(100vh - 60px);
+  padding: 10px 10px 10px 10px;
+}
+
+.imgproductos {
+  height: 70px;
+  width: 70px;
+  border-radius: 50%;
+  padding: 10px;
+  /* background-image: linear-gradient(to top, #00c6fb 0%, #005bea 100%); */
+  box-shadow: inset 0px 0px 15px 1px #02344e;
+  border: #00aaff solid 1px;
+}
+.fa{
+  cursor: pointer;
+}
+.fa:hover{
+  background: green;
+  transform: scale(1.1);
+}

@@ -1,0 +1,244 @@
+/* =================================================================
+    * FONTS LIST*
+===================================================================*/
+/*Prosto One*/
+@import url('https://fonts.googleapis.com/css2?family=Prosto+One&display=swap');
+
+/* =================================================================
+    * CONFIGURATION *
+==================================================================*/
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* =================================================================
+    * VARIABLES *
+==================================================================*/
+:root {
+  --font-Prosto: 'Prosto One', cursive;
+  --container-width: 1000px;
+
+  /* colors*/
+  --fondo: #f2f2f2;
+  --app-backgrond: #29292b;
+}
+
+/* =================================================================
+    * GENERAL STYLES *
+==================================================================*/
+body {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  width: 100vw;
+  min-height: 100vh;
+  padding: 0;
+  margin: 0px 0px;
+  background: var(--fondo);
+  font-family: var(--fuente);
+  font-size: 18px;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+
+body::-webkit-scrollbar {
+  width: 0.4em;
+}
+
+body::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: darkgrey;
+  outline: 1px solid slategrey;
+}
+
+.content{
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  min-height: calc(100vh - 340px);
+}
+
+h1,h2,h3,h4,h5,h6 {
+  margin-top: 0;
+}
+
+p {
+  line-height: 27px;
+}
+
+img {
+  vertical-align: text-top;
+  width: 100%;
+}
+
+.display-1 {
+  font-weight: 700;
+  font-size: 64px;
+}
+
+.display-2 {
+  font-weight: 700;
+  font-size: 54px;
+}
+
+.display-3 {
+  font-weight: 700;
+  font-size: 44px;
+}
+
+/* =================================================================
+    * BUTTONS FORMS *
+==================================================================*/
+.btn {
+  position: relative;
+  display: flex;
+  width: 100%;
+  height: auto;
+  margin: 1%;
+  padding: 1.5% 1.5%;
+  font-weight: bold;
+  cursor: pointer;
+  justify-content: center;
+  text-align: center;
+  float: left;
+}
+
+.btn.btn-2 {
+  background-color: none;
+  color: #d8d8d8;
+  font-size: 22px;
+  border: none;
+  border-radius: 5px;
+  transition: .3s ease-in-out all;
+}
+
+.btn.btn-2:hover {
+  background-color: none;
+  border-bottom: 1px solid #3170df;
+  color: #d8d8d8;
+  transform: translateY(-2px);
+  box-shadow: rgb(40, 63, 236, .4) 0 4px 8px, rgba(40, 63, 236, .3) 0 7px 13px -3px, #283fec 0 -2px 0 inset;
+}
+
+/* =================================================================
+    * INPUTS FORMS *
+==================================================================*/
+
+input[type=submit] {
+  margin-bottom: 0;
+}
+
+input.Input-2 {
+  width: 100%;
+  border: none;
+  background: none;
+  color: #ffffff;
+  padding: 5px 5px 5px 5px;
+  transition: .5s ease-in-out all;
+  margin-bottom: 10px;
+  border-bottom: 1px solid #f2f2f2;
+}
+
+input.Input-2:focus {
+  outline: none;
+  transform: scale(1.03);
+}
+
+/* =================================================================
+    * ICONS FORMS *
+==================================================================*/
+/* Brand Colors and Palettes --> https://usbrandcolors.com/*/
+.fa-brands:hover {
+  opacity: 1;
+  transform: scale(1.8);
+}
+
+.fa-facebook:hover {
+  color: #4267B2;
+}
+
+.fa-twitter:hover {
+  color: #1DA1F2;
+}
+
+.fa-instagram:hover {
+  border-radius: 50%;
+  color: #fff;
+  background: #d6249f;
+  background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+  box-shadow: 0px 3px 10px rgba(0, 0, 0, .1);
+}
+
+.fa-google:hover {
+  background: conic-gradient(from -45deg, #ea4335 110deg, #4285F4 90deg 180deg, #34a853 180deg 270deg, #fbbc05 270deg) 73% 55%/150% 150% no-repeat;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  -webkit-text-fill-color: transparent;
+}
+
+.fa-linkedin:hover {
+  background: #fff;
+  color: #0288D1;
+  border-radius: 15%;
+}
+
+.fa-github:hover {
+  color: #fff;
+  background-color: #3876b4;
+  border-radius: 50%;
+}
+
+.fa-whatsapp:hover {
+  color: #fff;
+  background-color: #25D366;
+  border-radius: 50%;
+}
+
+A:link {
+  text-decoration: none;
+  color: rgba(155, 155, 155, 0.727)
+}
+
+A:visited {
+  color: white;
+  font-family: arial;
+  text-decoration: none
+}
+
+A:hover {
+  color: white;
+  font-family: arial;
+  text-decoration: none
+}
+
+* {
+  outline: none !important;
+}
+
+*:focus {
+  outline: none !important;
+}
+
+textarea:focus,
+input:focus {
+  outline: none !important;
+}
+
+a {
+  text-decoration: none !important;
+  outline: none !important;
+}
+
+.cdk-global-overlay-wrapper, .cdk-overlay-container {
+  z-index: 10000 !important;
+  }

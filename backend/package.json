@@ -1,0 +1,41 @@
+{
+  "name": "topspinstore",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app.js",
+    "nodemon": "nodemon app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://https://github.com/daochoam/TopSpinStore-MEAN"
+  },
+  "keywords": [
+    "User",
+    "Products",
+    "Market",
+    "CreditCard"
+  ],
+  "author": "Daniel Francisco Ochoa Morón",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://https://github.com/daochoam/TopSpinStore-MEAN/issues"
+  },
+  "homepage": "https://https://github.com/daochoam/TopSpinStore-MEAN#readme",
+  "dependencies": {
+    "body-parser": "^1.20.1",
+    "connect-mongo": "^4.6.0",
+    "cors": "^2.8.5",
+    "ejs": "^3.1.8",
+    "email-validator": "^2.0.4",
+    "express": "^4.18.2",
+    "express-session": "^1.17.3",
+    "mongoose": "^6.9.0",
+    "multer": "^1.4.5-lts.1",
+    "nodemailer": "^6.9.1",
+    "nodemon": "^2.0.21",
+    "sha256": "^0.2.0"
+  }
+}

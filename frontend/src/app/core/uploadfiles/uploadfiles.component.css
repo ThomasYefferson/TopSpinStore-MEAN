@@ -1,0 +1,48 @@
+.container-upload {
+  height: auto;
+  width: auto;
+  border: solid 1px;
+  padding: 9px;
+  border-radius: 12px;
+
+}
+
+.lblprog {
+  height: 25px;
+  margin-bottom: 7px;
+
+}
+
+.btnsubir {
+  width: 100px;
+
+}
+
+.btnsubir-icon,
+i {
+  width: 50px;
+
+}
+
+.selectfile {
+  background: #0dcffd40;
+  width: auto;
+  height: auto;
+  border-radius: 15px;
+
+  margin-top: 5px;
+}
+
+.btn.btn-primary.btnsubir.ng-star-inserted {
+  border: solid 1px #0066ff;
+  margin-top: 5px;
+  border-radius: 15px;
+}
+
+i.fa-sharp.fa-solid.fa-upload {
+  margin-top: 8px;
+}
+
+.alert.alert-success.ng-star-inserted {
+  margin-top: 15px;
+}

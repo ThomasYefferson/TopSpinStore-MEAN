@@ -1,0 +1,38 @@
+<app-header></app-header>
+<div class="content">
+  <app-jumbotron></app-jumbotron>
+  <div class="MenuView">
+    <div class="row">
+      <div class="col-sm-6 col-md-3" *ngFor="let Category of ListCategory; let j = index " routerLink="/products/{{Category.Code}}">
+        <span *ngIf="j<8">
+        <img src="http://localhost:3000/productos/{{Category._id}}.png"  class="img-responsive">
+          <div class="text-center btn_blade Title" routerLink="/products/{{Category.Code}}">
+            {{Category.Name}}
+          </div>
+        </span>
+      </div>
+    </div>
+  </div>
+
+  <div class="misproductos">
+<div class="New-Products">
+      <div class="row">
+
+            <div *ngFor="let Product of ListProducts; let i = index " routerLink="/products/{{Product.Categoria}}" class="itemproducto col-6 col-sm-12 col-md-5 col-lg-3 col-xl-3" >
+              <span *ngIf="i<4">
+              <div  class="lblestado">Nuevo</div>
+              <img src="http://localhost:3000/productos/{{Product._id}}.png" class="clsmiproducto">
+              <div class="lblnombre">{{Product.Nombre}}</div>
+              <div class="lblprecio">{{Product.Precio | currency}}</div>
+            </span>
+            </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+<app-footer></app-footer>
+
+<!-- <li *ngFor="let book of books;let indexOfelement=index;">
+  ngFor index: {{indexOfelement}} value : {{book.name}}
+</li> -->

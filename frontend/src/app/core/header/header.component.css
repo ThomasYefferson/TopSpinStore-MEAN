@@ -1,0 +1,62 @@
+header{
+  position: relative;
+  align-items: center;
+  width: 100%;
+  min-height: 70px;
+  margin: 0;
+  padding: 0;
+  background: #29292b;
+  color: azure;
+  border: none;
+  z-index: 10;
+}
+
+.Log{
+  position:absolute;
+  right: 0px;
+  top: 60px;
+}
+
+.btn-login {
+  display: block;
+  position: absolute;
+  right: 20px;
+  top: 10px;
+  width: auto;
+  height: auto;
+  cursor: pointer;
+}
+
+.Photo{
+  display: block;
+  position:         absolute;
+  width: 50px;
+  height: 50px;
+  right: 15px;
+  top: 5px;
+  border-radius:    50%;
+  background:       antiquewhite;
+  border:           4px solid #4f4f4f;
+  cursor: pointer;
+}
+li.login{
+  display: none;
+}
+
+/* Active Menu Links */
+.active-link {
+  color: rgba(255,255,255,1);
+  font-weight:bool;
+}
+
+@media screen {
+  @media (max-width: 991px) {
+    .btn-login {
+      display: none;
+    }
+    li.login{
+      display: block;
+      cursor: pointer;
+    }
+  }
+}

@@ -1,0 +1,112 @@
+<div class="ventanaflotante">
+  <div class="container row">
+      <div class="Card-Title ">PERSONAL INFORMATION</div>
+      <div class="Info-Photo row">
+        <div class="data row">
+          <div class="Info col-8">
+            <div class="row">
+              <div class="col-12 col-md-12">
+                <label for="">Cedula:</label>
+                <input  class="Input-1"  type="Nume"  title="Cedula"  placeholder="ID number"  [(ngModel)]="Cedula"  disabled/>
+                <div class="Warm"><pre>{{msn_CC}}</pre></div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-12 col-md-12">
+                <label for="">Name:</label>
+                <input  class="Input-1"  type="text"  title="Name"  placeholder="Name"  [(ngModel)]="Name"/>
+                <div class="Warm"><pre>{{msn_Name}}</pre></div>
+              </div>
+              <div class="col-12 col-md-12">
+                <label for="">Lastname:</label>
+                <input class="Input-1" type="text" title="Lastname" [(ngModel)]="LastName" placeholder="Lastname"/>
+                <div class="Warm"><pre>{{msn_LastName}}</pre></div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-12 col-md-12">
+                <label for="">Email:</label>
+                <input
+                  class="Input-1"
+                  type="text"
+                  title="E-mail"
+                  placeholder="Email"
+                  [(ngModel)]="Email"
+                />
+                <div class="Warm"><pre>{{msn_Email}}</pre></div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-12 col-md-12">
+                <label for="">Password:</label>
+                <input
+                  class="Input-1"
+                  type="password"
+                  title="Password"
+                  placeholder="Password"
+                  [(ngModel)]="Password"
+                />
+                <div class="Warm"><pre>{{msn_Password}}</pre></div>
+              </div>
+              <div class="col-12 col-md-12">
+                <label for="">Confirm Password:</label>
+                <input
+                  class="Input-1"
+                  type="password"
+                  title="Confirm Password"
+                  placeholder="Confirm Password"
+                  [(ngModel)]="ConfirmPassword"
+                />
+                <div class="Warm"><pre>{{msn_ConfirmPassword}}</pre></div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-12 col-md-6">
+                <label for="">Age:</label>
+                <input
+                  class="Input-1"
+                  type="text"
+                  title="Age"
+                  placeholder="Age"
+                  [(ngModel)]="Age"
+                />
+                <div class="Warm"><pre>{{msn_Age}}</pre></div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-12 col-md-6">
+                <label for="">Phone:</label>
+                <input
+                  class="Input-1"
+                  type="text"
+                  title="Phone"
+                  placeholder="Phone"
+                  [(ngModel)]="Phone"
+                />
+                <div class="Warm"><pre>{{msn_Phone}}</pre></div>
+              </div>
+              <div class="col-12 col-md-6">
+                <label for="">Address:</label>
+                <input
+                  class="Input-1"
+                  type="text"
+                  title="Address"
+                  placeholder="Address"
+                  [(ngModel)]="Address"
+                />
+                <div class="Warm"><pre>{{msn_Address}}</pre></div>
+              </div>
+
+            </div>
+
+          </div>
+    </div>
+  </div>
+  <div class="button col-12 col-md-12">
+
+    <div type="button" class="btn btn-primary" title="Save" (click)="UpdateById()">Save</div>
+
+</div>
+</div>
+
+

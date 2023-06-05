@@ -1,0 +1,17 @@
+<app-header></app-header>
+<div class="content">
+  <div class="Products">
+    <div class="row">
+      <div class="col-sm-12 col-md-4 col-lg-3 tt-article" *ngFor="let Product of Datos">
+        <img src="{{Peticion.urlLocal}}/productos/{{Product._id}}.png" [alt]=Product.Categoria
+        (mouseover)="Description==true" (mouseout)="Description==false"/>
+        <div class="price" title="buy" (click)="AddMyMartket(Product._id)">{{Product.Precio | currency}}</div>
+        <h2 class="name-product">{{Product.Nombre}}</h2>
+        <span *ngIf="Description==true">
+
+        </span>
+      </div>
+    </div>
+  </div>
+</div>
+<app-footer></app-footer>

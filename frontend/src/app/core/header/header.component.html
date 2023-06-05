@@ -1,0 +1,42 @@
+<!-- MAIN HEADER -->
+<header>
+    <nav class="navbar navbar-expand-lg navbar-dark" >
+      <div class="container-fluid">
+        <a class="navbar-brand" routerLink="/home">
+          <a routerLink="/home" target=""><img src="/assets/Icons/Icon.png" width="40" height="40" class="d-inline-block align-top"
+            alt=""/></a>
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon" (click)="NavShow()"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto" >
+            <li class="nav-item" >
+              <a class="nav-link" routerLink="/home">Home</a>
+            </li>
+            <li class="nav-item" *ngFor="let Category of ListCategory">
+              <a class="nav-link" routerLink="/products/{{Category.Code}}">{{Category.Name}}</a>
+            </li>
+            <li class="nav-item login">
+              <a class="nav-link" (click)="LoginShow()">Login</a>
+            </li>
+          </ul>
+          <div class="d-flex" title="login" role="login">
+            <div class="Login-Success" id="Login-Success"></div>
+            <img class="Photo btn-login" (click)="LoginShow()"  (dblclick)="PrivateZone()" src="/assets/Icons/avatar.svg">
+          </div>
+        </div>
+      </div>
+    </nav>
+    <span class="Log">
+        <div *ngIf="LoginState==true">
+          <app-login ></app-login>
+        </div>
+        <div *ngIf="LoggedIn==true">
+          <app-logged-in></app-logged-in>
+        </div>
+    </span>
+</header>
+
+
+

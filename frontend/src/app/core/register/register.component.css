@@ -1,0 +1,87 @@
+/* =================================================================
+    * REGISTER *
+==================================================================*/
+.Form *{
+  font-family: var(--fuente);
+}
+
+.Title-1 {
+  margin: 2% auto;
+  padding: 0.5% auto;
+  border-bottom: 2px solid rgba(255, 255, 255, 0.637);
+}
+
+/*=============  REGISTER-1  ============*/
+.Form .Register {
+  display:flex;
+  position:fixed;
+  left: calc(50% - 160px);
+  top: calc(50% - 400px);
+  flex-direction: column;
+  min-width: 350px;
+  max-width: 420px;
+  height: auto;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  color: #fff;
+  background: #29292b;
+  border-radius: 15px;
+  margin: 1% auto;
+  padding: 0.5%;
+  animation: fly 0.8s;
+  box-shadow: 1px 1px 1px 1px #fff;
+}
+
+.Form .Register .Reg-btns{
+  position:relative;
+  margin: 2%;
+  padding: 2% auto;
+  justify-content: center;
+  display: flex;
+  align-items: flex-end;
+}
+
+@keyframes fly {
+  from {
+      transform: scale(0)
+  }
+
+  to {
+      transform: scale(1)
+  }
+}
+
+/*=============  CLOSE BUTTON  ============*/
+
+.Form .Register .btn-shut {
+  position: absolute;
+  right: 10px;
+  top: 5px;
+}
+
+.btn-shut{
+  color: rgb(228, 223, 223);
+  font-weight: bold;
+}
+
+.btn-shut:hover, .btn-shut:focus {
+  color: rgb(180, 0, 0);
+  cursor: pointer;
+}
+
+/*=============  ALERTS  ============*/
+.Alert{
+  width: 100%;
+  height: 10%;
+  font-size: 10px;
+  color: rgb(124, 252, 0)
+}
+
+.Warm{
+  width: 100%;
+  height: auto;
+  font-size: 120%;
+  border-color: #fff;
+  color: rgb(225, 75, 75)
+}

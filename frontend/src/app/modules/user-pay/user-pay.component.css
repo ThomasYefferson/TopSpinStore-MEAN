@@ -1,0 +1,100 @@
+.ventanaflotante{
+  position: absolute;
+  background: whitesmoke;
+  top: 90px;
+  left: 195px;
+  width: calc(98% - 175px);
+  height: calc(100vh - 60px);
+  padding: 10px 10px 10px 10px;
+}
+
+
+.Field_Cards {
+  position: absolute;
+  max-width: 80vw;
+  height: auto;
+  top: 90px;
+  left: 200px;
+  border-bottom: 4px solid rgb(91, 89, 89);
+  border-left: 8px solid rgb(91, 89, 89);
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-content: stretch;
+  justify-content: center;
+  align-items: baseline;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  margin:0.5%;
+  padding: 0.1%;
+}
+
+
+input.Input-1{
+  display: flex;
+  flex-direction: column;
+  padding:            6px 8px;
+  border-radius:      3px;
+  background:         none;
+  border: none;
+  border-bottom:      2px solid rgb(91, 89, 89);
+  border-right:       2px solid rgb(91, 89, 89);
+  transition:         .2s ease-in-out;
+  width:              100%;
+  margin-bottom:      10px;
+  box-sizing:         border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing:    border-box;
+}
+
+input.Input-1:focus{
+  border-bottom:         2px solid #125eb5;
+  background: white;
+}
+
+.Card-Title{
+  width: 100%;
+  background:  rgb(91, 89, 89);
+  color: white;
+}
+.Field_Cards label {
+  display: inline-block;
+  width: 100%;
+  font-size: 120%;
+  margin: 0;
+  padding: 1px 1px 1px 1px;
+  border: none;
+}
+
+.Ccard{
+  font-size: 35px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-wrap: nowrap;
+  justify-content: center;
+}
+
+.button{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  align-items: flex-end;
+  justify-content: space-evenly;
+  align-content: stretch;
+}
+.btn {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+    align-content: space-around;
+}
+
+.fa-brands:hover{
+  transform: scale(1.3);
+}
